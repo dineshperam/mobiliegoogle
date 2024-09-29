@@ -218,53 +218,35 @@ p {
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Phones</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Earbuds</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Watches & Trackers</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Accessories
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Unique Cases</a>
-          <a class="dropdown-item" href="#">Colored Bands</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">More...</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Support</a>
+        <a class="nav-link" href="shop.jsp">Shop Products</a>
       </li>
     </ul>
 
-    <!-- Search bar with icon -->
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
-    </form>
+    <!-- Push remaining items to the right -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Search bar with icon -->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
+      </form>
 
-    <!-- Icons for Cart and User Profile -->
-    <ul class="navbar-nav">
+      <!-- Icons for Cart and User Profile -->
       <li class="nav-item mx-3">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="cart.jsp">
           <i class="fa fa-shopping-cart" style="font-size: 1.5rem;"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="profile.jsp">
           <img src="https://via.placeholder.com/30" class="rounded-circle" alt="User Profile">
         </a>
       </li>
     </ul>
   </div>
 </nav>
+
 
 <section>
 <div class="pixel-container">
