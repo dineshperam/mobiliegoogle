@@ -234,7 +234,7 @@ p {
 
       <!-- Icons for Cart and User Profile -->
       <li class="nav-item mx-3">
-        <a class="nav-link" href="cart.jsp">
+        <a class="nav-link" href="cart">
           <i class="fa fa-shopping-cart" style="font-size: 1.5rem;"></i>
         </a>
       </li>

@@ -36,7 +36,7 @@ public class SaveProduct extends HttpServlet {
 			}
 			else {
 				dao.rollback();
-				request.setAttribute("status", "Product not Added .......");
+				request.setAttribute("status", "XXXXX Not Added .......");
 			}
 			RequestDispatcher dispatcher = request.getRequestDispatcher("shop.jsp");
 			dispatcher.forward(request, response);

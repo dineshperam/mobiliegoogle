@@ -182,10 +182,14 @@ body {
         <div class="form-box">
             <h1>Product Information</h1>
             <p>Get 99% Off on more than <span class="extra"> 5 Products.</span></p>
-            <form action='saveproduct'>
+            <form action='editproduct'>
+            	<div class="input-row">
+                    <label for="id">Id</label>
+                    <input type="text" id="id" name="id" value='<%= request.getParameter("id") %>'>
+                </div>
                 <div class="input-row">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter ur name">
+                    <input type="text" id="name" name="name" value='<%= request.getParameter("name") %>'>
                 </div>
 
                 <div class="input-row-inline">
@@ -261,7 +265,7 @@ body {
                     </div>
                 </div>
 
-          <button type="submit">Place Order</button>
+          <button type="submit">Update Order</button>
             </form>
             <a href="#">Know More</a>
         </div>
