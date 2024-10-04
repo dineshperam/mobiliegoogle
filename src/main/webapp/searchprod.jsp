@@ -149,14 +149,14 @@ body {
     <!-- Push remaining items to the right -->
     <ul class="navbar-nav ml-auto">
       <!-- Search bar with icon -->
-      <form class="form-inline my-2 my-lg-0" action='searchprod.jsp'>
+      <form class="form-inline my-2 my-lg-0">
         <button class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
       </form>
 
       <!-- Icons for Cart and User Profile -->
       <li class="nav-item mx-3">
         <a class="nav-link" href="cart">
-			View Products
+		View Products
         </a>
       </li>
       <li class="nav-item">
@@ -179,49 +179,14 @@ body {
 
 <div class="container">
         <div class="form-box">
-            <h1>Modify Product Information</h1>
-            <form action='editproduct'>
-            	<div class="input-row">
-                    <label for="id">Id</label>
-                    <input type="text" id="id" name="id" value='<%= request.getParameter("id") %>'>
-                </div>
+            <h1>Search Product</h1>
+            <form action='searchprod'>
                 <div class="input-row">
-                    <label for="prodtype">Select Product Type</label>
-                    <select id="prodtype" name="prodtype">
-        <option value="">Choose Type</option>
-        <option value="Phones" <%= "Phones".equals(request.getParameter("prodtype")) ? "selected" : "" %>>Phones</option>
-        <option value="Watches" <%= "Watches".equals(request.getParameter("prodtype")) ? "selected" : "" %>>Watches & Trackers</option>
-        <option value="TVs" <%= "TVs".equals(request.getParameter("prodtype")) ? "selected" : "" %>>TVs</option>
-        <option value="Laptops" <%= "Laptops".equals(request.getParameter("prodtype")) ? "selected" : "" %>>Laptops</option>
-        <option value="Speakers" <%= "Speakers".equals(request.getParameter("prodtype")) ? "selected" : "" %>>Speakers</option>
-    </select>
+                    <label for="prodname">Product Name</label>
+                    <input type="text" id="prodname" name="prodname" placeholder="Enter product name">
                 </div>
 
-                <div class="input-row-inline">
-                    <div class="input-col">
-                        <label for="location">Manufacturing Location</label>
-                        <input type="text" id="location" name="location" value='<%= request.getParameter("location") %>'>    
-                    </div>
-
-                    <div class="input-col">
-                        <label for="mdate">Manufacturing Date</label>
-                        <input type="date" id="mdate" name="mdate" value='<%= request.getParameter("mdate") %>'>
-                    </div>
-                </div>
-
-                <div class="input-row-inline">
-                    <div class="input-col">
-                        <label for="prodname">Enter Product Name</label>
-                        <input type="text" id="prodname" name="prodname" value='<%= request.getParameter("prodname") %>'>
-                    </div>
-
-                    <div class="input-col">
-                        <label for="prodprice">Enter Price</label>
-                        <input type="text" id="prodprice" name="prodprice" value='<%= request.getParameter("prodprice") %>'>
-                    </div>
-                </div>
-
-          <button type="submit">Update</button>
+          <button type="submit">Search</button>
             </form>
             <a href="#">Know More</a>
         </div>

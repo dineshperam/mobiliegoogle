@@ -11,32 +11,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dao.ProductsDAO;
-import com.model.Products;
 
-@WebServlet("/saveproduct")
-public class SaveProduct extends HttpServlet {
+
+@WebServlet("/deleteproduct")
+public class DeleteProduct extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Products prod = new Products();
-		prod.setProdtype(request.getParameter("prodtype"));
-		prod.setLocation(request.getParameter("location"));
-		prod.setMdate(request.getParameter("mdate"));
-		prod.setProdname(request.getParameter("prodname"));
-		prod.setProdprice(request.getParameter("prodprice"));
-		
-		ProductsDAO dao = new ProductsDAO();
-		
-		try {
-			boolean status = dao.save(prod);
+		int id = Integer.parseInt(request.getParameter("id"));
+		 ProductsDAO  dao = new ProductsDAO();	
+		 try {
+			boolean status = dao.deleteById(id);
 			if(status) {
 				dao.commit();
-				request.setAttribute("status", "Product Added to the Cart");
+				request.setAttribute("status", "Deleted successfully.");
 			}
 			else {
 				dao.rollback();
-				request.setAttribute("status", "XXXXX Not Added .......");
+				request.setAttribute("status", "Not deleted...");
 			}
-			RequestDispatcher dispatcher = request.getRequestDispatcher("shop.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("cart");
 			dispatcher.forward(request, response);
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();

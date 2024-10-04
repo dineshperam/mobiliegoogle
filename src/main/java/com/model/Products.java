@@ -2,13 +2,11 @@ package com.model;
 
 public class Products {
 	private int id;
-	private String name;
-	private String phonename;
-	private String phonequantity;
-	private String watchname;
-	private String watchquantity;
-	private String budsname;
-	private String budsquantity;
+	private String prodtype;
+	private String location;
+	private String mdate;
+	private String prodname;
+	private String prodprice;
 	
 	public Products() {}
 
@@ -19,61 +17,46 @@ public class Products {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	public String getName() {
-		return name;
+
+	public String getProdtype() {
+		return prodtype;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setProdtype(String prodtype) {
+		this.prodtype = prodtype;
 	}
 
-	public String getPhonename() {
-		return phonename;
+	public String getLocation() {
+		return location;
 	}
 
-	public void setPhonename(String phonename) {
-		this.phonename = phonename;
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
-	public String getPhonequantity() {
-		return phonequantity;
+	public String getMdate() {
+		return mdate;
 	}
 
-	public void setPhonequantity(String phonequantity) {
-		this.phonequantity = phonequantity;
+	public void setMdate(String mdate) {
+		this.mdate = mdate;
 	}
 
-	public String getWatchname() {
-		return watchname;
+	public String getProdname() {
+		return prodname;
 	}
 
-	public void setWatchname(String watchname) {
-		this.watchname = watchname;
+	public void setProdname(String prodname) {
+		this.prodname = prodname;
 	}
 
-	public String getWatchquantity() {
-		return watchquantity;
+	public String getProdprice() {
+		return prodprice;
 	}
 
-	public void setWatchquantity(String watchquantity) {
-		this.watchquantity = watchquantity;
+	public void setProdprice(String prodprice) {
+		this.prodprice = prodprice;
 	}
 
-	public String getBudsname() {
-		return budsname;
-	}
-
-	public void setBudsname(String budsname) {
-		this.budsname = budsname;
-	}
-
-	public String getBudsquantity() {
-		return budsquantity;
-	}
-
-	public void setBudsquantity(String budsquantity) {
-		this.budsquantity = budsquantity;
-	}
 	
 }

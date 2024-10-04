@@ -36,7 +36,6 @@
 
 body {
   font-family: var(--body-font);
-  background-color: var(--text-color);
 }
 a {
   text-decoration: none;
@@ -228,27 +227,26 @@ img {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="shop.jsp">Shop Products</a>
+        <a class="nav-link" href="shop.jsp">Add Products</a>
       </li>
     </ul>
 
     <!-- Push remaining items to the right -->
     <ul class="navbar-nav ml-auto">
       <!-- Search bar with icon -->
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="form-inline my-2 my-lg-0" action='searchprod.jsp'>
         <button class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
       </form>
 
       <!-- Icons for Cart and User Profile -->
       <li class="nav-item mx-3">
         <a class="nav-link" href="cart">
-          <i class="fa fa-shopping-cart" style="font-size: 1.5rem;"></i>
-        </a>
+		View Products
+	        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="profile.jsp">
-          <img src="https://via.placeholder.com/30" class="rounded-circle" alt="User Profile">
+          <img src="https://lh3.googleusercontent.com/a/ACg8ocI9Qjs41nm4kt3_UXPZMMeTsEYUCtApBLrqeottpMMu5XYazP0=s40-c" class="rounded-circle" alt="User Profile">
         </a>
       </li>
     </ul>

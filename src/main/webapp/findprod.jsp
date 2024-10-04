@@ -119,7 +119,7 @@ tbody {
       <!-- Icons for Cart and User Profile -->
       <li class="nav-item mx-3">
         <a class="nav-link" href="cart">
-		View Products
+			View Products
         </a>
       </li>
       <li class="nav-item">
@@ -147,16 +147,29 @@ tbody {
   </thead>
   <tbody>
 <c:forEach items="${products}" var="product">
-    <tr>
-      	<td scope="row"><c:out value="${product.id}"></c:out></td>
-      	<td><c:out value="${product.prodtype}"></c:out></td>
-		<td><c:out value="${product.location}"></c:out></td>
-		<td><c:out value="${product.mdate}"></c:out></td>
-		<td><c:out value="${product.prodname}"></c:out></td>
-		<td><c:out value="${product.prodprice}"></c:out></td>
-		<td><a href = 'editprod.jsp?id=${product.id}&prodtype=${product.prodtype}&location=${product.location}&mdate=${product.mdate}&prodname=${product.prodname}&prodprice=${product.prodprice}'>Edit</a></td>
-		<td><a href = 'deleteproduct?id=${product.id}'>Delete</a></td>
-    </tr>
+        <tr>
+            <td scope="row"><c:out value="${product.id}" /></td>
+            <td><c:out value="${product.prodtype}" /></td>
+            <td><c:out value="${product.location}" /></td>
+            <td><c:out value="${product.mdate}" /></td>
+            <td><c:out value="${product.prodname}" /></td>
+            <td><c:out value="${product.prodprice}" /></td>
+            <td>
+                <a href='<c:url value="editprod.jsp">
+                            <c:param name="id" value="${product.id}" />
+                            <c:param name="prodtype" value="${product.prodtype}" />
+                            <c:param name="location" value="${product.location}" />
+                            <c:param name="mdate" value="${product.mdate}" />
+                            <c:param name="prodname" value="${product.prodname}" />
+                            <c:param name="prodprice" value="${product.prodprice}" />
+                         </c:url>'>Edit</a>
+            </td>
+            <td>
+                <a href='<c:url value="deleteproduct">
+                            <c:param name="id" value="${product.id}" />
+                         </c:url>'>Delete</a>
+            </td>
+        </tr>
     </c:forEach>
   </tbody>
 

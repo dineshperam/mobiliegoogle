@@ -48,6 +48,14 @@
     cursor: pointer;
     border-radius: 10px;
 }
+.card-container button {
+    padding: 5px 20px;
+    font-size: 18px;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+}
 
 .pixel-container .image-container {
     margin-top: 20px;
@@ -82,6 +90,7 @@ h1 {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top:50px;
 }
 
 .card {
@@ -180,10 +189,6 @@ p {
             font-weight: bold;
         }
 
-        .product-card a:hover {
-            background-color: #555;
-        }
-
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
     .recommendations {
@@ -217,30 +222,22 @@ p {
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="shop.jsp">Shop Products</a>
-      </li>
-    </ul>
-
     <!-- Push remaining items to the right -->
     <ul class="navbar-nav ml-auto">
       <!-- Search bar with icon -->
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="form-inline my-2 my-lg-0" action='searchprod.jsp'>
         <button class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
       </form>
 
       <!-- Icons for Cart and User Profile -->
       <li class="nav-item mx-3">
         <a class="nav-link" href="cart">
-          <i class="fa fa-shopping-cart" style="font-size: 1.5rem;"></i>
+          View Products
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="profile.jsp">
-          <img src="https://via.placeholder.com/30" class="rounded-circle" alt="User Profile">
+          <img src="https://lh3.googleusercontent.com/a/ACg8ocI9Qjs41nm4kt3_UXPZMMeTsEYUCtApBLrqeottpMMu5XYazP0=s40-c" class="rounded-circle" alt="User Profile">
         </a>
       </li>
     </ul>
@@ -253,7 +250,7 @@ p {
     <h1>Oh hi, This is Dinesh. </h1>
     <p>Meet the new Pixel 9 Pro XL, Pixel 9 Pro, Pixel 9, and Pixel 9 Pro Fold with Gemini.</p>
     <p>Stock subject to availability with the retailer.</p>
-    <button>Browse Phones</button>
+    <button><a href="shop.jsp">Add Products</a></button>
     <div class="image-container">
       <img src="https://lh3.googleusercontent.com/bA0wByW6n_bfDApwv_b3o8TRTT_ZiXuqg1qanoNfDvr6v1Za8zgR5wnoeseiXci69VqhXWnRLRa138lEq8MENa6b-9C-McxMLi8=rw-e365-nu-w2300" alt="Pixel 9 Series">
     </div>
@@ -263,6 +260,7 @@ p {
 <section class="reco">
 <div class="card-container">
         <h1>Our Top Recommendations.</h1>
+        <button><a href="cart">View All Products</a></button>
         <div class="recommendations">
             <div class="card">
                 <img src="https://lh3.googleusercontent.com/Pn6gWhoGgOWaR5vHJ0v0gN4Ag2s42wwHhFyKfvYCyaR3cavQ4sTSQknSnUhooc_aMbp_1JHFI_P8fpND3n4Jyu53aXLiFzR3GZo=rw-e365-w1200" alt="Pixel 9 Pro and Pro XL">

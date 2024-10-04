@@ -19,13 +19,11 @@ public class EditProduct extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Products products = new Products();
 		products.setId(Integer.parseInt(request.getParameter("id")));
-		products.setName(request.getParameter("name"));
-		products.setPhonename(request.getParameter("phones"));
-		products.setPhonequantity(request.getParameter("phonequantity"));
-		products.setWatchname(request.getParameter("watches"));
-		products.setWatchquantity(request.getParameter("watchquantity"));
-		products.setBudsname(request.getParameter("earbuds"));
-		products.setBudsquantity(request.getParameter("budsquantity"));
+		products.setProdtype(request.getParameter("prodtype"));
+		products.setLocation(request.getParameter("location"));
+		products.setMdate(request.getParameter("mdate"));
+		products.setProdname(request.getParameter("prodname"));
+		products.setProdprice(request.getParameter("prodprice"));
 		ProductsDAO dao = new ProductsDAO();
 		
 		try {

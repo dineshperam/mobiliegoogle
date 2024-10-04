@@ -37,7 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 80%;
 }
 
 .form-box {
@@ -140,29 +140,24 @@ body {
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="shop.jsp">Shop Products</a>
-      </li>
-    </ul>
+    
 
     <!-- Push remaining items to the right -->
     <ul class="navbar-nav ml-auto">
       <!-- Search bar with icon -->
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="form-inline my-2 my-lg-0" action='searchprod.jsp'>
         <button class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
       </form>
 
       <!-- Icons for Cart and User Profile -->
       <li class="nav-item mx-3">
         <a class="nav-link" href="cart">
-          <i class="fa fa-shopping-cart" style="font-size: 1.5rem;"></i>
+			View Products
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="profile.jsp">
-          <img src="https://via.placeholder.com/30" class="rounded-circle" alt="User Profile">
+          <img src="https://lh3.googleusercontent.com/a/ACg8ocI9Qjs41nm4kt3_UXPZMMeTsEYUCtApBLrqeottpMMu5XYazP0=s40-c" class="rounded-circle" alt="User Profile">
         </a>
       </li>
     </ul>
@@ -180,88 +175,45 @@ body {
 
 <div class="container">
         <div class="form-box">
-            <h1>Product Information</h1>
-            <p>Get 99% Off on more than <span class="extra"> 5 Products.</span></p>
+            <h1>Add a Product !!</h1>
             <form action='saveproduct'>
                 <div class="input-row">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter ur name">
+                    <label for="prodtype">Select Product Type</label>
+                    <select id="prodtype" name="prodtype">
+                        <option value="">Choose Type</option>
+                            <option value="Phones">Phones</option>
+                            <option value="Watches">Watches & Trackers</option>
+                            <option value="TVs">TVs</option>
+                            <option value="Laptops">Laptops</option>
+                            <option value="Speakers">Speakers</option>
+                        </select>
                 </div>
 
                 <div class="input-row-inline">
                     <div class="input-col">
-                        <label for="phones">Pixel Phones</label>
-                        <select id="phones" name="phones">
-                            <option value="">Choose a Phone</option>
-                            <option value="Pixel 9 Pro XL">Pixel 9 Pro XL</option>
-                            <option value="Pixel 9 Pro">Pixel 9 Pro</option>
-                            <option value="Pixel 9 Fold">Pixel 9 Fold</option>
-                            <option value="Pixel 9">Pixel 9</option>
-                        </select>
+                        <label for="location">Manufacturing Location</label>
+                        <input type="text" id="location" name="location" placeholder="Enter Location">    
                     </div>
 
                     <div class="input-col">
-                        <label for="phonequantity">Quantity</label>
-                        <select id="phonequantity" name="phonequantity">
-                            <option value="">Choose Quantity</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <label for="mdate">Manufacturing Date</label>
+                        <input type="date" id="mdate" name="mdate" placeholder="Select date">
                     </div>
                 </div>
 
                 <div class="input-row-inline">
                     <div class="input-col">
-                        <label for="watches">Watches & Trackers</label>
-                        <select id="watches" name="watches">
-                            <option value="">Choose a Watch</option>
-                            <option value="Pixel Watch 3">Pixel Watch 3</option>
-                            <option value="Pixel Watch 2">Pixel Watch 2</option>
-                            <option value="Fitbit Sense 2">Fitbit Sense 2</option>
-                        </select>
+                        <label for="prodname">Enter Product Name</label>
+                        <input type="text" id="prodname" name="prodname" placeholder="Enter product name">
                     </div>
 
                     <div class="input-col">
-                        <label for="watchquantity">Quantity</label>
-                        <select id="watchquantity" name="watchquantity">
-                            <option value="">Choose Quantity</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <label for="prodprice">Enter Price</label>
+                        <input type="text" id="prodprice" name="prodprice" placeholder="Enter price">
                     </div>
                 </div>
 
-                <div class="input-row-inline">
-                    <div class="input-col">
-                        <label for="earbuds">Earbuds</label>
-                        <select id="earbuds" name="earbuds">
-                            <option value="">Choose a Model</option>
-                            <option value="Buds 2 Pro">Buds 2 Pro</option>
-                            <option value="Buds A-Series">Buds A-Series</option>
-                            <option value="Pixel Buds">Pixel Buds</option>
-                        </select>
-                    </div>
-
-                    <div class="input-col">
-                        <label for="budsquantity">Quantity</label>
-                        <select id="budsquantity" name="budsquantity">
-                            <option value="">Choose Quantity</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                </div>
-
-          <button type="submit">Place Order</button>
+          <button type="submit">Add Products</button>
             </form>
             <a href="#">Know More</a>
         </div>
